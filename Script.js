@@ -416,3 +416,35 @@ if(slides.length > 0){
   }, 3000);
 
 }
+/* ================= REAL APP TABS ================= */
+
+const tabs = document.querySelectorAll(".tab-item");
+
+const tabContents = document.querySelectorAll(".tab-content");
+
+tabs.forEach(tab => {
+
+  tab.addEventListener("click", () => {
+
+    // remove active
+    tabs.forEach(item =>
+      item.classList.remove("active")
+    );
+
+    tabContents.forEach(content =>
+      content.classList.remove("active")
+    );
+
+    // active current
+    tab.classList.add("active");
+
+    const target =
+      document.getElementById(tab.dataset.tab);
+
+    if(target){
+      target.classList.add("active");
+    }
+
+  });
+
+});

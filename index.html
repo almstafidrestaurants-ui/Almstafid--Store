@@ -69,20 +69,31 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </section>
 <!--============================= CATEGORY TABS ============================-->
 <div class="category-tabs">
-     
-  <a href="#offers" class="tab-item active"> Offers </a>
 
-  <a href="#" id="openGallery" class="tab-item">Sections</a>
+  <button class="tab-item active" data-tab="offersTab">
+    Offers
+  </button>
 
-  <a href="clients.html" class="tab-item"> Clients </a>
+  <button class="tab-item" data-tab="sectionsTab">
+    Sections
+  </button>
 
-  <a href="#accessories" class="tab-item"> Accessories </a>
-     
-  <a href="#" id="learningBtn" class="tab-item"> Programming courses </a>
+  <button class="tab-item" data-tab="clientsTab">
+    Clients
+  </button>
+
+  <button class="tab-item" data-tab="accessoriesTab">
+    Accessories
+  </button>
+
+  <button class="tab-item" data-tab="learningTab">
+    Programming courses
+  </button>
 
 </div>
   <!-- ===============================salse store================================================================-->
-      <div class="section-light">
+     <div class="tab-content active" id="offersTab">
+          <div class="section-light">
 <div id="offers" class="salse-container">
     <div class="salse-header">
       <h3> Offers </h3>
@@ -462,50 +473,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
  </div>
 </div>    
 
-  <!-- ============================================== salse Hardware ============================================================== -->
-       <div class="section-light">
-<div id="shopSection" class="salse-container">
-    <div class="salse-header">
-      <h1>إكسسوارات</h1>
-      <button class="btn-button"> المزيد </button>
-    </div>
-
-    <!-- 🔥 Container واحد بس -->
-    <div class="salse-cards">
-
-      <!-- صورة 1 -->
-     <div class="card">
-  <img class="thumb_buy"
-       src="images/add1.jpeg"
-       onclick="openFullModal(this)"
-       data-product='[
-         {
-           "img":"images/add1.jpeg",
-           "title":"Gaming Set",
-           "price":"$400",
-            "desc":"يارب وفقني لما تحب وترضا"
-       },
-         {
-           "img":"images/add1.jpeg",
-           "title":"Office Set",
-           "price":"$200",
-            "desc":"Laptop Core i5 8th Gen, 8GB RAM, 256GB SSD, 15.5 Screen + Mouse + Bag  Laptop Core i5 8th Gen, 8GB RAM, 256GB SSD, 15.5 Screen + Mouse + Bag "
-         }
-       ]'
-  />
-  <div class="card-info-buy">
-    <div class="card-name">
-      <p>Almstafid</p>
-      <h3>Almstafid Programming</h3>
-    </div>
-  </div>
-</div>
-
-     
-    </div>
-  </div>
-</div>
-
+  
 <!--===================================== لوحة الاتصال الجديد ========================================================-->
 <div class="contact-modal">
   <div class="contact-content">
@@ -746,7 +714,7 @@ We provide practical and fast solutions with integrated systems that can connect
   </div>
 </div>
 <!--==================================== Sections Modal للاقسام =================================================-->
-<div class="tab-panel" id="galleryModal">
+<div class="tab-content" id="sectionsTab">
 
   <!-- المحتوى -->
   <div class="gallery-grid">
@@ -802,10 +770,63 @@ We provide practical and fast solutions with integrated systems that can connect
   </div>
 
 </div>
+<!--==================================== Clients Modal  =================================================-->
+     <div class="tab-content" id="clientsTab">
+
+  <div class="salse-container">
+    <h1>Clients</h1>
+  </div>
+
+</div>
+          
+          <!-- ============================================== salse Hardware ============================================================== -->
+       <div class="section-light">
+            <div class="tab-content" id="accessoriesTab">
+    <div class="salse-header">
+      <h1>إكسسوارات</h1>
+      <button class="btn-button"> المزيد </button>
+    </div>
+
+    <!-- 🔥 Container واحد بس -->
+    <div class="salse-cards">
+
+      <!-- صورة 1 -->
+     <div class="card">
+  <img class="thumb_buy"
+       src="images/add1.jpeg"
+       onclick="openFullModal(this)"
+       data-product='[
+         {
+           "img":"images/add1.jpeg",
+           "title":"Gaming Set",
+           "price":"$400",
+            "desc":"يارب وفقني لما تحب وترضا"
+       },
+         {
+           "img":"images/add1.jpeg",
+           "title":"Office Set",
+           "price":"$200",
+            "desc":"Laptop Core i5 8th Gen, 8GB RAM, 256GB SSD, 15.5 Screen + Mouse + Bag  Laptop Core i5 8th Gen, 8GB RAM, 256GB SSD, 15.5 Screen + Mouse + Bag "
+         }
+       ]'
+  />
+  <div class="card-info-buy">
+    <div class="card-name">
+      <p>Almstafid</p>
+      <h3>Almstafid Programming</h3>
+    </div>
+  </div>
+</div>
+
+     
+    </div>
+  </div>
+</div>
+</div>
 <!--================= Programming Education  ====================================-->
 
 <div class="section-light">
-  <div id="learning" class="salse-container">
+ <div class="tab-content" id="learningTab">
       <span>almstafid</span>
     <div class="salse-header">
             <h1>Programming Education</h1>

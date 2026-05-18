@@ -285,29 +285,14 @@ document.addEventListener("DOMContentLoaded", () => {
     openGallery.addEventListener("click", (e) => {
       e.preventDefault();
 
-      galleryModal.style.display = "flex";
-      document.body.classList.add("modal-open");
+galleryModal.classList.toggle("show");
     });
 
     // 👇 بدل querySelector
     document.addEventListener("click", (e) => {
 
-      // زر الإغلاق
-      if (e.target.classList.contains("gallery-close")) {
-        galleryModal.style.display = "none";
-        document.body.classList.remove("modal-open");
-      }
-
-      // كليك خارج المودال
-      if (e.target === galleryModal) {
-        galleryModal.style.display = "none";
-        document.body.classList.remove("modal-open");
-      }
-
     });
-
   }
-
 });
 /* =================  رأس صفحة للتلفون ================= */
 

@@ -440,9 +440,9 @@ border-radius: 15px;
 }
 .salse-container {
   width: 100%;
-  max-width: 1200px; /* أو 1300 */
+  max-width: 1200px;
  margin: auto;
-   padding: 40px 20px; 
+   padding: 8px 16px 24px;
 }
 .salse-container span{
 background: linear-gradient(to right, #4F8DFD, #3B6FEA);
@@ -554,13 +554,13 @@ background-clip: text; /* 🔥 أضف هيدا */
  text-transform: uppercase;
     font-size: 14px;
 }
-.section-light {
-  background: #ffffff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  padding: 10px;
-  border-radius: 20px;
-  margin-bottom: 40px;
-} 
+.section-light{
+  background: #fff;
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 20px;
+  box-shadow: none;
+}
 .buy-btn {
   width: fit-content;
   margin-top: 15px;

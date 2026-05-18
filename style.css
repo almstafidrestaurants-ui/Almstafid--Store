@@ -236,27 +236,18 @@ font-weight: 700;
 /* ================= BOX ================= */
 
 .button-modal-content{
-
   width: 100%;
   max-width: 430px;
-
   padding: 34px 24px 28px;
-
   border-radius: 36px;
-
   position: relative;
-
   background:
   rgba(255,255,255,0.72);
-
   backdrop-filter: blur(25px);
-
   border:
   1px solid rgba(255,255,255,0.5);
-
   box-shadow:
   0 30px 60px rgba(0,0,0,0.18);
-
   animation: modalShow .35s ease;
 }
 
@@ -564,48 +555,153 @@ gap: 20px;
 .salse-cards.show-all .card{
   display: block;
 }
-.card{
-   width: 100%;
-     background-color: #fff;
-  color: #222;
-  border: 1px solid #edf2f7;
-  border-radius: 30px;
-  overflow: hidden;  
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  transition: 0.35s;     
-}
-.card:hover {
-transform: translateY(-8px) ;
-  transition: 0.3s;
-   box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-    }
-.card-info{
-      background: transparent;
-  color: white;
-    display: flex;
-        justify-content: space-between;
-        align-items: center;
-         padding: 5px 25px; 
-       }
-       /* جديد*/
+/*============================================================================================*/
+/* =========================
+   PREMIUM OFFER CARD
+========================= */
 
-.card-info img {
-    width: 40px;
-    border-radius:20px ;
-      transition: 0.3s;
+.card{
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 34px;
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow:
+    0 10px 35px rgba(15,23,42,0.06),
+    0 2px 10px rgba(15,23,42,0.04);
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+  isolation: isolate;
 }
-.card:hover img {
-  transform: scale(1.05);
-    }
-    .card a {
+.offer-badge{
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  font-size: 11px;
+  font-weight: 800;
+  color: #2563eb;
+  z-index: 10;
+  box-shadow:  0 5px 15px rgba(0,0,0,0.08);
+}
+/* glow */
+.card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:linear-gradient( 180deg, rgba(255,255,255,0.45), rgba(255,255,255,0) );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card:hover{
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 25px 60px rgba(15,23,42,0.12), 0 10px 30px rgba(59,111,234,0.08);
+}
+
+/* ================= IMAGE ================= */
+
+.thumb_buy{
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  padding: 28px;
+  background:
+    radial-gradient(circle at top,
+    #f8fbff,
+    #eef3ff);
+  transition:
+    transform .6s ease,
+    filter .5s ease;
   display: block;
 }
-.card .thumb {
-       width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 15px 15px 0 0;
+
+/* zoom image */
+.card:hover .thumb_buy{
+  transform: scale(1.06);
+  filter: contrast(1.04);
 }
+
+/* ================= CONTENT ================= */
+
+.card-info-buy{
+  position: relative;
+  z-index: 2;
+  padding:
+    26px
+    24px
+    30px;
+  text-align: center;
+}
+
+/* الشركة */
+
+.card-name p{
+  margin: 0;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #94a3b8;
+}
+
+/* العنوان */
+
+.card-name h3{
+  margin:
+    14px 0
+    18px;
+
+  font-size: 26px;
+
+  line-height: 1.35;
+
+  font-weight: 800;
+
+  letter-spacing: -0.8px;
+
+  color: #0f172a;
+}
+
+/* ================= PRICE ================= */
+
+.price-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-acc{
+  font-size: 52px !important;
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #60a5fa
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 10px 25px rgba(37,99,235,0.15);
+}
+
+/*============================================================================================*/
 .section-dark {
   background: #f5f7fa;
   padding: 60px 0;
@@ -638,39 +734,6 @@ transform: translateY(-8px) ;
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(225,106,0,0.4);
 }
-
-.thumb_buy {
-  width: 100%;
-  height: 190px;        /* 🔥 حجم ثابت */
-  object-fit: cover;    /* يقص بشكل مرتب */
-  border-radius: 20px 20px 0 0;
-  display: block;
-}
-
-.card-info-buy {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* 🔥 */
-  align-items: center;
-  text-align: center;
-  padding: 15px;
-  height: 100%;
-}
-.card-name p{
-  color: #94a3b8;
-  font-size: 14px;
-  margin: 0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.card-name h3{
-  color: #111827;
-  margin: 8px 0;
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 1.5;
-}
-
 /* شاشة لي بتفتح فوق الصفحة اسمها model*/
 .full-modal {
   position: fixed;
@@ -726,43 +789,11 @@ transition: 0.4s;
   margin-top: 15px;
 }
 
-.thumbs img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  cursor: pointer;
-  border-radius: 10px;
-}
-.card:hover .price-acc {
-  transform: scale(1.1);
-  transition: 0.3s;
-}
 /*جهة اليمين*/
 .right-side {
   width: 40%;
 }
-.price-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-/* السعر */
-.price-acc{
-    width: 100%;
-  font-size: 60px !important;
-  font-weight: 800;
-  background: #22c55e;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  margin-top: 15px;
-    text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 /* البادج */
 .badge {
   background: linear-gradient(to right, #ff7a18, #ffb347);
@@ -2091,47 +2122,10 @@ box-shadow:
   margin-bottom: 0;
 }
 
-.salse-cards{
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-.card{
-  border-radius: 26px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
-  overflow: hidden;
-  background: #fff;
-}
-
-.thumb_buy{
-  height: 210px;
-  object-fit: contain;
-  background: #f8fafc;
-  padding: 10px;
-}
-
-.card-info-buy{
-  padding: 14px;
-}
-
-.card-name h3{
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.card-name p{
-  font-size: 12px;
-}
-
-.buy-btn{
-  width: 100%;
-  height: 42px;
-  border-radius: 14px;
-  font-size: 13px;
-}
-
-.price-acc{
-  font-size: 34px !important;
+.salse-cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+gap: 24px;
 }
 
 /* ================= VIEW MORE ================= */
@@ -2317,8 +2311,29 @@ box-shadow:
     font-size: 14px;
     padding: 16px;
   }
+  /* =============================================================== ================= */
+  /* card */
+  /* ================================================================================== */
+  .card{
+    border-radius: 30px;
+  }
 
+  .thumb_buy{
+    height: 240px;
+    padding: 20px;
+  }
 
+  .card-info-buy{
+    padding: 22px 18px 26px;
+  }
+
+  .card-name h3{
+    font-size: 21px;
+  }
+
+  .price-acc{
+    font-size: 44px !important;
+  }
   /* ================= Sign In ================= */
 
   .button-modal{

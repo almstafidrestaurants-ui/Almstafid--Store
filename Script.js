@@ -186,29 +186,7 @@ function closeFullModal() {
   document.getElementById("fullModal").style.display = "none";
   document.body.classList.remove("modal-open");
 }
-/*===================== view all ===========================*/
 
-const viewBtn = document.getElementById("viewAllBtn");
-const cardsContainer = document.querySelector(".salse-cards");
-
-if (viewBtn && cardsContainer) {
-
-  viewBtn.addEventListener("click", () => {
-
-    cardsContainer.classList.toggle("show-all");
-
-    if(cardsContainer.classList.contains("show-all")){
-
-      viewBtn.textContent = "إغلاق";
-
-    } else {
-
-      viewBtn.textContent = "المزيد";
-    }
-
-  });
-
-}
 /*=====================    خدماتنا    ===========================*/
 
 const servicesBtn = document.getElementById("servicesBtn");

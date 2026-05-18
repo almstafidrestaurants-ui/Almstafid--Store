@@ -1566,72 +1566,28 @@ color: #3a6ff7;
 }
 
 /* ====================================================================================================== */
-/* GALLERY */
+/* Sections */
 /* ========================================================================================================= */
-.gallery-modal{
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    overflow-y: auto;   /* مهم */
-    z-index: 9999;
-    padding: 20px;
-  justify-content: center;
-  align-items: center;
-}
+.tab-panel{
 
-.gallery-grid{
   width: 100%;
-  min-height: 100vh;
   background: #f3f5fb;
-  padding: 80px 18px 40px;
-  display: grid;
-   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap: 25px;
-}
 
-/* الكرت */
-.gallery-card{
-  background: #dfe3ee;
-  border-radius: 34px;
-  padding: 18px;
+  max-height: 0;
   overflow: hidden;
-  box-shadow:
-    0 15px 40px rgba(0,0,0,0.08);
-  transition: 0.35s ease;
+
+  transition: .45s ease;
+
+  border-radius: 0 0 30px 30px;
 }
 
-/* hover */
-.gallery-card:hover{
-  transform: translateY(-8px);
-  box-shadow:
-    0 22px 50px rgba(0,0,0,0.12);
-}
+/* وقت يفتح */
+.tab-panel.show{
 
-/* الصورة */
-.gallery-card img{
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-    border-radius: 25px;
-  display: block;
-  background: #fff;
-}
+  max-height: 3000px;
 
-/* اسم القسم */
-.gallery-card h2{
-  margin: 0;
+  padding: 0;
 
-  padding: 22px 10px 10px;
-
-  text-align: center;
-
-  font-size: 34px;
-  font-weight: 800;
-
-  color: #111827;
-
-  letter-spacing: -1px;
 }
 /* ================= HERO SLIDER ================= */
 .hero-slider{
@@ -1742,10 +1698,10 @@ body{
   font-size: 14px;
   background: #f8fafc;
 }
+/* ========================================================================= ================= */
+/*HEADER  */
+/* ========================================================================= ================= */
 
-/* ================= HEADER ================= */
-/* ================= HEADER ================= */
-/* ================= HEADER APPLE STYLE ================= */
 .header{
   position: sticky;
   top: 0;
@@ -2237,35 +2193,19 @@ box-shadow:
   padding: 70px 16px 20px;
 }
 
-/* ================= GALLERY ================= */
-.gallery-grid{
-  padding: 80px 14px 24px;
-  gap: 22px;
-}
-
-/* الكرت */
-.gallery-card{
-  border-radius: 28px;
-  padding: 12px;
-}
-
-/* الصورة */
-.gallery-card img{
+/* ================= TAB PANEL ================= */
+.tab-panel{
   width: 100%;
-  height: 210px;
-
-  object-fit: cover;
-
-  border-radius: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: .4s ease;
+  background: #f3f5fb;
+  border-radius: 0 0 24px 24px;
 }
 
-/* اسم القسم */
-.gallery-card h2{
-  font-size: 27px;
+.tab-panel.show{
+  max-height: 3000px;
 
-  padding: 18px 10px 12px;
-
-  line-height: 1.3;
 }
 /* ================= CLOSE BUTTONS ================= */
 

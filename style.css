@@ -546,8 +546,8 @@ background-clip: text; /* 🔥 أضف هيدا */
 }
 .salse-cards {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 /* لما ينضاف class show-all */
 .salse-cards.show-all .card{
@@ -557,11 +557,12 @@ gap: 20px;
    PREMIUM OFFER CARD
 /*============================================================================================*/
 .card{
-  border-radius: 26px;
-  overflow: hidden;
   background: #fff;
-  border: 1px solid #eef2f7;
-  box-shadow: 0 8px 24px rgba(15,23,42,.05);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 4px 15px rgba(0,0,0,.05);
+  transition: .25s;
 }
 
 .card:hover{
@@ -593,10 +594,11 @@ gap: 20px;
 /* ================= IMAGE ================= */
 .thumb_buy{
   width: 100%;
-  height: 190px;
+  height: 140px;
   object-fit: contain;
-  padding: 18px;
-  background: linear-gradient( 180deg,#f8fafc 0%, #eef2ff 100%);
+  padding: 12px;
+  background: white;
+  display: block;
 }
 
 .card:hover .thumb_buy{
@@ -606,10 +608,9 @@ gap: 20px;
 .card-info-buy{
   position: relative;
   z-index: 2;
-  padding: 20px 16px 24px;
-  text-align: center;
+  padding: 12px;
+   text-align: left;
 }
-
 /* الشركة */
 .card-name p{
   margin: 0;
@@ -622,22 +623,33 @@ gap: 20px;
 
 /* العنوان */
 .card-name h3{
- font-size: 18px;
+font-size: 15px;
   line-height: 1.5;
-  font-weight: 800;
-  color: #0f172a;
-  margin: 8px 0 10px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 10px;
+}
+/* ================= specs ================= */
+.specs{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.specs span{
+  font-size: 12px;
+  color: #6b7280;
 }
 /* ================= PRICE ================= */
-
 .price-box{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .price-acc{
-   font-size: 34px !important;
-  margin-top: 6px;
+   font-size: 26px !important;
+  margin: 10px 0;
   font-weight: 800;
   color: #2563eb;
   background: none;

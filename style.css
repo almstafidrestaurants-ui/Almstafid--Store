@@ -216,23 +216,15 @@ font-weight: 700;
 .button-modal{
   position: fixed;
   inset: 0;
-
-  background:
-  rgba(15,23,42,0.45);
-
+  background: rgba(15,23,42,0.45);
   backdrop-filter: blur(18px);
-
   display: none;
   justify-content: center;
   align-items: center;
-
   z-index: 99999;
-
   padding: 20px;
 }
-
 /* ================= BOX ================= */
-
 .button-modal-content{
   width: 100%;
   max-width: 430px;
@@ -250,9 +242,7 @@ font-weight: 700;
 }
 
 /* ================= ANIMATION ================= */
-
 @keyframes modalShow{
-
   from{
     opacity: 0;
     transform:
@@ -266,213 +256,136 @@ font-weight: 700;
     translateY(0)
     scale(1);
   }
-
 }
-
 /* ================= TITLE ================= */
-
 .button-modal-content h2{
-
   font-size: 42px;
   font-weight: 800;
-
   color: #111827;
-
   margin-top: 0;
   margin-bottom: 28px;
-
   letter-spacing: -1px;
 }
 
 /* ================= CLOSE BUTTON ================= */
-
 #closeSign_button{
-
   position: absolute;
-
   top: 18px;
   right: 18px;
-
   width: 44px;
   height: 44px;
-
   border-radius: 50%;
-
   background:
   rgba(255,255,255,0.65);
-
   backdrop-filter: blur(10px);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 28px;
-
   color: #64748b;
-
   cursor: pointer;
-
   transition: .25s;
 }
 
 #closeSign_button:hover{
-
   transform:
   rotate(90deg)
   scale(1.08);
-
   background: white;
 }
 
 /* ================= INPUTS ================= */
-
 .input-group,
 .password-box{
-
   position: relative;
-
   margin-bottom: 18px;
 }
 
 /* الانبوت */
-
 .input-group input,
 .password-box input{
-
   width: 100%;
   height: 64px;
-
   border-radius: 22px;
-
   border:
   1.5px solid rgba(226,232,240,0.9);
-
   background:
   rgba(255,255,255,0.78);
-
   padding-left: 54px;
   padding-right: 54px;
-
   font-size: 16px;
   font-weight: 600;
-
   color: #0f172a;
-
   outline: none;
-
   transition: .3s;
 }
 
 /* focus */
-
 .input-group input:focus,
 .password-box input:focus{
-
   border-color: #4F8DFD;
-
   background: white;
-
   box-shadow:
   0 0 0 5px rgba(79,141,253,0.12);
-
   transform:
   translateY(-1px);
 }
 
 /* placeholder */
-
 .input-group input::placeholder,
 .password-box input::placeholder{
-
   color: #94a3b8;
 }
 
 /* icon */
-
 .input-group .icon{
-
   position: absolute;
-
   left: 18px;
   top: 50%;
-
   transform: translateY(-50%);
-
   font-size: 20px;
-
   color: #4F8DFD;
 }
 
 /* eye */
-
 #togglePassword{
-
   position: absolute;
-
   right: 18px;
   top: 50%;
-
   transform: translateY(-50%);
-
   font-size: 22px;
-
   cursor: pointer;
-
   opacity: .6;
-
   transition: .25s;
 }
 
 #togglePassword:hover{
-
   opacity: 1;
-
   transform:
   translateY(-50%)
   scale(1.08);
 }
 
 /* ================= BUTTON ================= */
-
 .button-login-btn{
-
   width: 100%;
   height: 60px;
-
   border: none;
-
   border-radius: 22px;
-
   margin-top: 10px;
-
-  background:
-  linear-gradient(
-    135deg,
-    #5B8CFF,
-    #2563eb
-  );
-
+  background: linear-gradient( 135deg, #5B8CFF, #2563eb );
   color: white;
-
   font-size: 20px;
   font-weight: 700;
-
   cursor: pointer;
-
   transition: .3s;
-
-  box-shadow:
-  0 15px 35px rgba(37,99,235,.32);
+  box-shadow: 0 15px 35px rgba(37,99,235,.32);
 }
 
 .button-login-btn:hover{
-
   transform:
   translateY(-3px);
-
-  box-shadow:
-  0 22px 45px rgba(37,99,235,.4);
+  box-shadow: 0 22px 45px rgba(37,99,235,.4);
 }
 .landing-page {
     gap: 40px; /* 🔥 مهم */
@@ -636,6 +549,7 @@ font-size: 15px;
   gap: 6px;
   margin-bottom: 12px;
 }
+
 .specs span{
   font-size: 12px;
   color: #6b7280;
@@ -655,6 +569,32 @@ font-size: 15px;
   background: none;
   -webkit-text-fill-color: unset;
   display: block;
+}
+/* ================= whatsapp ================= */
+.whatsapp-card-btn{
+  width: 100%;
+  height: 44px;
+  margin-top: 16px;
+  border-radius: 14px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: .3s ease;
+}
+
+.whatsapp-card-btn i{
+  font-size: 18px;
+}
+
+.whatsapp-card-btn:hover{
+  transform: translateY(-2px);
+  background: #1ebe5d;
 }
 /*============================================================================================*/
 .section-dark {
